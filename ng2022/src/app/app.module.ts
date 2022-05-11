@@ -6,6 +6,11 @@ import {HttpClientModule} from '@angular/common/http';
 import { UsersComponent } from './components/users/users.component';
 import { UserComponent } from './components/user/user.component';
 import {UserService} from './services/user.service';
+import {PostService} from './services/post.service';
+import { PostsComponent } from './components/posts/posts.component';
+import { PostComponent } from './components/post/post.component';
+import { CommentsComponent } from './components/comments/comments.component';
+import { CommentComponent } from './components/comment/comment.component';
 
 
 @NgModule({
@@ -13,12 +18,16 @@ import {UserService} from './services/user.service';
     AppComponent,
     UsersComponent,
     UserComponent,
+    PostsComponent,
+    PostComponent,
+    CommentsComponent,
+    CommentComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
-  providers: [UserService],
+  providers: [UserService, PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
