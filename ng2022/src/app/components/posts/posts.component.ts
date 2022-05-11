@@ -1,5 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {IPost} from '../../models/IPost';
+import {Component, OnInit} from '@angular/core';
+
+import {IPost} from '../../models/post.interface';
+
 import {PostService} from '../../services/post.service';
 
 
@@ -9,7 +11,8 @@ import {PostService} from '../../services/post.service';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  @Input()
+
+
   posts: IPost[];
   constructor(private postService: PostService) { }
 

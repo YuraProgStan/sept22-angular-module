@@ -1,11 +1,15 @@
 import {Injectable} from '@angular/core';
-import {Observable} from "rxjs";
-import {HttpClient} from "@angular/common/http";
-import {IUser} from "../models/IUser";
+
+import {Observable} from 'rxjs';
+
+import {HttpClient} from '@angular/common/http';
+
+import {IUser} from "../models/user.interface";
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class UserService {
  private url = 'https://jsonplaceholder.typicode.com/users'
 
