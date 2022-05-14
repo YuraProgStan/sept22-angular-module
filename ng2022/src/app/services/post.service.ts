@@ -1,25 +1,27 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {IPost} from "../models/post.interface";
+
+import {IPost} from '../models';
+import {urls} from '../constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
-  private url = 'https://jsonplaceholder.typicode.com/posts'
-  constructor(private http: HttpClient) {
+
+  constructor(private httpClient: HttpClient) {
 
   }
-  getPosts(): Observable<IPost[]> {
+  getAll(): Observable<IPost[]> {
     return this
-      .http
-      .get<IPost[]>(this.url)
+      .httpClient
+      .get<IPost[]>(urls.posts)
   }
 
-  getPost(id: number): Observable<IPost> {
+  getById(id: number): Observable<IPost> {
     return this
-      .http
-      .get<IPost>(this.url + '/' + id)
+      .httpClient
+      .get<IPost>(urls.posts + '/' + id)
   }
 }
