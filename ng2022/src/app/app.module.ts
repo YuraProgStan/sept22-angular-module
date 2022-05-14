@@ -11,6 +11,11 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { CommentComponent } from './components/comment/comment.component';
 
 import {UserService, PostService, CommentService} from './services';
+import {RouterModule} from "@angular/router";
+import { HomeComponent } from './components/home/home.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { PostDetailsComponent } from './components/post-details/post-details.component';
+import { CommentDetailsComponent } from './components/comment-details/comment-details.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +26,32 @@ import {UserService, PostService, CommentService} from './services';
     PostComponent,
     CommentsComponent,
     CommentComponent,
+    HomeComponent,
+    UserDetailsComponent,
+    PostDetailsComponent,
+    CommentDetailsComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      {path: '', redirectTo: 'home-page', pathMatch: 'full'},
+      {path: 'home-page', component: HomeComponent},
+      {path: 'users-page', component: UsersComponent,
+      children: [
+        //users-page/user-details/:ID
+        {path: 'user-details/:id', component: UserDetailsComponent}
+      ]},
+      // {path: 'user-details/:id', component: UserDetailsComponent},
+      {path: 'posts-page', component: PostsComponent,
+        children: [
+          {path: 'post-details/:id', component: PostDetailsComponent}
+        ]},
+      {path: 'comments-page', component: CommentsComponent,
+        children: [
+          {path: 'comment-details/:id', component: CommentDetailsComponent}
+        ]},
+    ])
   ],
   providers: [UserService, PostService, CommentService],
   bootstrap: [AppComponent]

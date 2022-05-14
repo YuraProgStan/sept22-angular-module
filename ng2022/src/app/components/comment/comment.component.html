@@ -1,2 +1,4 @@
-<div class="comments">{{comment.id}} -- {{comment.postId}} -- {{comment.name}} -- {{comment.email}} -- {{comment.body}}</div>
+<div>{{comment.id}} -- {{comment.postId}} -- {{comment.name}} -- {{comment.email}} -- {{comment.body}}
+  <a [routerLink]="['comment-details', comment.id]" [state] = "{data: comment}">details</a>
+</div>
 

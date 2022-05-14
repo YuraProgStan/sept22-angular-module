@@ -20,7 +20,7 @@ export class UserService {
       .get<IUser[]>(urls.users)
   }
 
-  getById(id: number): Observable<IUser> {
+  getById(id: string): Observable<IUser> {
     return this
       .httpClient
       .get<IUser>(urls.users + '/' + id)

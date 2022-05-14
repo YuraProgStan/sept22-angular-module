@@ -1,2 +1,7 @@
-<div class="posts">{{post.id}} -- {{post.userId}} -- {{post.title}} -- {{post.body}}</div>
+<div>{{post.id}} -- {{post.userId}} -- {{post.title}} -- {{post.body}}
+  <a [routerLink]="['post-details', post.id]">details</a>
+
+</div>
+
+
 

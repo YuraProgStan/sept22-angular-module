@@ -1,1 +1,8 @@
-<div class="users">{{user.id}} -- {{user.name}} -- {{user.email}}</div>
+<div>
+  <p>user works</p>
+  {{user.id}} -- {{user.name}} -- {{user.email}} -- -- {{user.company.name}}
+<!--  <a routerLink="/user-details/{{user.id}}">details</a>-->
+<!--  url based on father-->
+<!--  <a routerLink="user-details/{{user.id}}">details</a>-->
+  <a [routerLink]="['user-details', user.id]" [state] = "{data: user}">details</a>
+</div>
