@@ -1,4 +1,6 @@
-<div>{{comment.id}} -- {{comment.postId}} -- {{comment.name}} -- {{comment.email}} -- {{comment.body}}
-  <a [routerLink]="['comment-details', comment.id]" [state] = "{data: comment}">details</a>
+<div routerLinkActive="acive">
+  {{comment.id}} --{{comment.name}}
+  <a routerLink="{{comment.id}}" [state] = "{comment}">details</a>
+<!--  <a [routerLink]="['comment-details', comment.id]" [state] = "{comment}">details</a>-->
 </div>
 
