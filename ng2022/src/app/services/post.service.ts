@@ -7,7 +7,7 @@ import {urls} from '../constants/urls';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class PostService {
 
 
   constructor(private http: HttpClient) {
@@ -16,12 +16,12 @@ export class UserService {
   getAll(): Observable<IUser[]> {
     return this
       .http
-      .get<IUser[]>(urls.users)
+      .get<IUser[]>(urls.posts)
   }
 
   getById(id: number): Observable<IUser> {
     return this
       .http
-      .get<any>(urls.users + '/' + id)
+      .get<any>(urls.posts + '/' + id)
   }
 }

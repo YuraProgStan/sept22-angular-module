@@ -7,7 +7,7 @@ import {urls} from '../constants/urls';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class CommentService {
 
 
   constructor(private http: HttpClient) {
