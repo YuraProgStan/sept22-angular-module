@@ -7,7 +7,7 @@ import {IUser} from "../models/IUser";
   providedIn: 'root'
 })
 export class UserService {
- private url = 'https://jsonplaceholder.typicode.com/users'
+ private _url = 'https://jsonplaceholder.typicode.com/users';
 
   constructor(private http: HttpClient) {
   }
@@ -15,12 +15,12 @@ export class UserService {
   getUsers(): Observable<IUser[]> {
     return this
       .http
-      .get<IUser[]>(this.url)
+      .get<IUser[]>(this._url)
   }
 
   getUser(id: number): Observable<IUser> {
     return this
       .http
-      .get<any>(this.url + '/' + id)
+      .get<any>(this._url + '/' + id)
   }
 }

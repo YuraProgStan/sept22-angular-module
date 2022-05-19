@@ -2,23 +2,23 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {HttpClientModule} from '@angular/common/http';
-import { UsersComponent } from './components/users/users.component';
-import { UserComponent } from './components/user/user.component';
-import {UserService} from './services/user.service';
+import { HomeComponent } from './app-components/home/home.component';
+import {AppRoutingModule} from "./app-routing.module";
+import { MenuComponent } from './app-components/menu/menu.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent,
-    UserComponent,
+    HomeComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    AppRoutingModule
   ],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
