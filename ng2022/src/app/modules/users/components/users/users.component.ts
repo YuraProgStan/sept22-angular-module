@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {IUser} from '../../models/IUser';
+import {Component, OnInit} from '@angular/core';
+import {IUser} from '../../../../models';
 import {UserService} from '../../services/user.service';
 
 @Component({
@@ -9,7 +9,6 @@ import {UserService} from '../../services/user.service';
 })
 export class UsersComponent implements OnInit {
 
-  @Input()
    users: IUser[];
 
   constructor(private userService: UserService) {

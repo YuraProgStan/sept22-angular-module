@@ -1,13 +1,13 @@
 import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
-import {IUser} from "../models/IUser";
-import {urls} from '../constants/urls';
+import {IUser} from "../../../models/user.interface";
+import {urls} from '../../../constants/urls';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CommentService {
+export class UserService {
 
 
   constructor(private http: HttpClient) {

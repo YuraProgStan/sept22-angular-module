@@ -1,0 +1,16 @@
+ul{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: darkcyan;
+  padding: 10px 0;
+}
+
+li{
+  list-style: none;
+   cursor: pointer;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
