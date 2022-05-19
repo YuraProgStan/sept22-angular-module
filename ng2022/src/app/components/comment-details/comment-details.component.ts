@@ -17,8 +17,8 @@ export class CommentDetailsComponent implements OnInit {
   ngOnInit(): void {
   this.activatedRoute.params.subscribe(({id}) => {
 
-    // @ts-ignore
-    const state = this.router.getCurrentNavigation()?.extras?.['comment'] as IComment
+
+    const state = this.router.getCurrentNavigation()?.extras?.state?.['comment'] as IComment
     if(state){
       this.comment = state
     }
