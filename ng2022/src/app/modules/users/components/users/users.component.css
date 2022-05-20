@@ -1,0 +1,9 @@
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.wrapper>div{
+  padding: 0 10px;
+}

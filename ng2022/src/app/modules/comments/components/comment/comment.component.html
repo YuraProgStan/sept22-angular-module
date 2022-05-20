@@ -1,1 +1,5 @@
-<div>{{comment.id}}--{{comment.name}}</div>
+<div>
+  <div>{{comment.id}} {{comment.name}}
+<!--  <a routerLink="{{comment.id}}">details</a></div>-->
+  <button (click)="getDetails()">details</button></div>
+</div>
