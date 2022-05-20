@@ -29,5 +29,4 @@ export class CommentDetailsComponent implements OnInit {
     // this.commentDetailsObj = data;
   })
   }
-
 }
