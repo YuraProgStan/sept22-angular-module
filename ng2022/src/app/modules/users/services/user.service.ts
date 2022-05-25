@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Observable} from "rxjs";
+import {delay, Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {IUser} from "../../../models/";
 import {urls} from '../../../constants/urls';
@@ -22,6 +22,6 @@ export class UserService {
   getById(id: number): Observable<IUser> {
     return this
       .http
-      .get<any>(urls.users + '/' + id)
+      .get<any>(urls.users + '/' + id).pipe(delay(2000))
   }
 }
