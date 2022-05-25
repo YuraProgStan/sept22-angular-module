@@ -1,0 +1,17 @@
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: darkcyan;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  padding: 0 25px;
+}
+
+.active a{
+  color: red;
+}
