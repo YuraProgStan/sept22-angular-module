@@ -6,12 +6,13 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CarsComponent } from './components/cars/cars.component';
-import { CarComponent } from './components/car/car.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MainInterceptor} from "./main.interceptor";
+import {CarService} from "./services/car.service";
+import {AuthService} from "./services";
 
 
 @NgModule({
@@ -20,7 +21,6 @@ import {MainInterceptor} from "./main.interceptor";
     MainLayoutComponent,
     HeaderComponent,
     CarsComponent,
-    CarComponent,
     LoginComponent,
     RegisterComponent,
   ],

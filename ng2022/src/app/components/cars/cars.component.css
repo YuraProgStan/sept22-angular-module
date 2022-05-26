@@ -1,0 +1,11 @@
+form{
+  margin: 20px 0;
+}
+form input{
+  margin-bottom: 10px;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+}
