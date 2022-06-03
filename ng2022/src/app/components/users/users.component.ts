@@ -9,6 +9,7 @@ import {UserService} from '../../services/user.service';
 })
 export class UsersComponent implements OnInit {
 
+  asd = 'hello'
   @Input()
    users: IUser[];
 
