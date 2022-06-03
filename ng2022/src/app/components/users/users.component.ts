@@ -12,9 +12,6 @@ export class UsersComponent implements OnInit {
   @Input()
   users: IUser[];
 
-  @Output()
-  userEmitt = new EventEmitter<IUser>()
-
   constructor(private userService: UserService) {
 
   }
@@ -23,9 +20,6 @@ export class UsersComponent implements OnInit {
     this.userService.getUsers().subscribe(value => this.users = value)
   }
 
-  catchUserEmitt(userCatch: IUser): void {
-    console.log('users', userCatch);
-    this.userEmitt.emit(userCatch);
-  }
+
 
 }
