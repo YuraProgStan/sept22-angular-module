@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {IUser} from "./models/IUser";
-import {UserService} from "./services/user.service";
 
 @Component({
   selector: 'app-root',
@@ -9,4 +8,10 @@ import {UserService} from "./services/user.service";
 })
 export class AppComponent {
 
+  user: IUser
+
+  catch(user: IUser) {
+    console.log('app', user);
+    this.user = user;
+  }
 }
