@@ -6,6 +6,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { UsersComponent } from './components/users/users.component';
 import { UserComponent } from './components/user/user.component';
 import {UserService} from './services/user.service';
+import { СustomPipe } from './services/pipes/сustom.pipe';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import {UserService} from './services/user.service';
     AppComponent,
     UsersComponent,
     UserComponent,
+    СustomPipe,
   ],
   imports: [
     BrowserModule,
