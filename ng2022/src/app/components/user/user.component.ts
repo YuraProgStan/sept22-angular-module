@@ -13,6 +13,7 @@ export class UserComponent implements OnInit {
 
   @Output()
   userEmitter = new EventEmitter<IUser>()
+  details: string
 
   constructor() {
   }
@@ -21,6 +22,7 @@ export class UserComponent implements OnInit {
   }
 
   emitt(): void {
-    this.userEmitter.emit(this.user)
+    this.userEmitter.emit(this.user);
+    this.details = 'do some details about user'
   }
 }
