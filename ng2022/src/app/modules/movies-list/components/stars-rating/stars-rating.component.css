@@ -1,0 +1,14 @@
+.checked {
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: #b9cb41;
+}
+
+.unchecked{
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: #dddddd;
+}
+.stars {
+  display: flex;
+}

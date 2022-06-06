@@ -1,0 +1,7 @@
+.movie-card{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  cursor: pointer;
+  gap: 10px;
+}

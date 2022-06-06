@@ -1,0 +1,10 @@
+<div *ngIf="movies" >
+<div class="movie-list">
+  <app-movie *ngFor="let m of movies?.results" [movie]="m"></app-movie>
+
+</div>
+  <div class="pages" *ngIf="movies">
+<button [disabled] = "page <= 1 ? 'disabled': null" (click)="prev(page)" class="prevnext">Prev</button>
+<button  [disabled] = "page === movies.total_pages ? 'disabled': null" (click)="next(page)" class="prevnext">Next</button>
+  </div>
+</div>

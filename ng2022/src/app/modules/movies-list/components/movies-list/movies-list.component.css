@@ -1,0 +1,33 @@
+.movie-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+
+}
+.pages{
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+}
+.prevnext{
+  border: none;
+  background-color: unset;
+  color:#d0402d;
+  font-size: 16px;
+  font-weight: bold;
+}
+/*.wrapdarked .prevnext{*/
+/*  color: #fff;*/
+/*}*/
+.prevnext:hover{
+  color: #fff;
+  background-color: unset;
+
+}
+
+@media screen and (max-width: 767px) {
+  .movie-list {
+    justify-content: center;
+  }
+}

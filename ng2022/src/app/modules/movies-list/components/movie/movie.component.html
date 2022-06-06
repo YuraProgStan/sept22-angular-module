@@ -1,0 +1,10 @@
+
+<div *ngIf="movie" class="movie-card" [routerLink]="['/movies', movie.id]">
+    <app-poster-preview [urlImage]="movie.poster_path" [title]="movie.title" [widthImage]="widthImage"></app-poster-preview>
+    <div><h3>{{movie.original_title}}</h3></div>
+    <div>
+      Genres: <span *ngFor="let genre of genreNames">{{genre}} </span>
+    </div>
+    <app-stars-rating [voteAverage]="movie.vote_average"></app-stars-rating>
+
+</div>

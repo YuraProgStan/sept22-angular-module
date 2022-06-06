@@ -3,22 +3,31 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
-import { UsersComponent } from './components/users/users.component';
-import { UserComponent } from './components/user/user.component';
-import {UserService} from './services/user.service';
+import { MainLayoutComponent } from './main layot/main-layout/components/main-layout.component';
+import { HeaderComponent } from './main layot/header/components/header.component';
+import {AppRoutingModule} from "./app-routing.module";
+import { MoviesPageComponent } from './main layot/movies-page/components/movies-page/movies-page.component';
+import {GenresListModule} from "./modules/genres-list/genres-list.module";
+import {MoviesListModule} from "./modules/movies-list/movies-list.module";
+import { MoviesInfoPageComponent } from './main layot/movies-info-page/movies-info-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent,
-    UserComponent,
+    MainLayoutComponent,
+    HeaderComponent,
+    MoviesPageComponent,
+    MoviesInfoPageComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    GenresListModule,
+    MoviesListModule,
   ],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

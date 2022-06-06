@@ -1,0 +1,10 @@
+  <form  *ngIf="genres"  [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <select  formControlName="genreName" (change)='onOptionsSelected()'  >
+      <option value="" >ALL Genres</option>
+      <option   *ngFor="let genre of genres?.genres"
+                [value]="genre.id" >{{genre.name}}</option>
+    </select>
+<!--    <button type="submit" class="btn btn-primary">Apply</button>-->
+  </form>
+
+

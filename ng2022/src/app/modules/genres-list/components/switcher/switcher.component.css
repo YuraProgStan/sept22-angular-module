@@ -1,0 +1,6 @@
+.switch{
+  display: flex;
+  gap: 10px;
+}
+
+label{margin-left: 10px}

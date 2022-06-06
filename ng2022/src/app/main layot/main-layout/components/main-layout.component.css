@@ -1,0 +1,60 @@
+.container{
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #F8F8F8FF;
+}
+
+.wrap {
+  display: flex;
+  background-color: #eeeeee;
+  border-radius: 20px;
+  color: #3e3a56;
+}
+
+.wrapdarked {
+  display: flex;
+  background-color: #324077;
+  border-radius: 20px;
+  color: white;
+}
+.wrapdarked a {
+  color: #fff;
+}
+.wrapdarked a button:hover{
+  color: #d6d8d9;
+}
+
+
+.header{
+  flex:2
+}
+.main{
+  flex:10;
+  padding: 15px;
+}
+.wrapdarked .main button {
+  color: #fff !important;
+}
+
+
+@media screen and (max-width: 780px) {
+  .wrap, .wrapdarked {
+    flex-direction: column;
+  }
+
+
+
+  .main {
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 413px) {
+  .container {
+    padding: 0;
+  }
+
+  .main {
+    padding: 10px
+  }
+}

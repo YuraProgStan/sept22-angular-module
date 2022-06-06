@@ -1,0 +1,16 @@
+
+
+<form [formGroup]="form">
+  <div class="switch">
+  <div>
+  <input type="radio" id="light" [value]="'light'" formControlName="switchTheme"
+         [checked]="theme === 'light'">
+  <label htmlFor="light">Light</label>
+  </div>
+    <div>
+  <input type="radio" id="dark"  [value]="'dark'" formControlName="switchTheme"
+         [checked]="theme === 'dark'"><label htmlFor="dark">Dark</label>
+    </div>
+  </div>
+</form>
+
